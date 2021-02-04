@@ -1,0 +1,41 @@
+@mixin before-circle {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 36px;
+        height: 36px;
+        border-radius: 100%;
+        background: $main-color;
+        left: 0;
+        top: -20%;
+        z-index: -1;
+    }
+}
+@mixin btn {
+    background-color: $font-color;
+    height: 4.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 1.2rem 2.5rem;
+}
+
+@mixin fz16 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+@mixin fz14 {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+@mixin fz20 {
+    font-size: 2rem;
+    line-height: 3rem;
+}
+@mixin fz36 {
+    font-weight: 700;
+    font-size: 3.6rem;
+    line-height: 6rem
+}
+@mixin fz48 {
+    font-size: 4.8rem;
+
+}

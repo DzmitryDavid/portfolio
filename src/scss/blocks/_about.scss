@@ -1,0 +1,69 @@
+.about {
+    padding: 13rem 10rem 10rem 0;
+    &__wrapper {
+        display: flex;
+        &-description {
+            padding-left: 7rem;
+        }
+    }
+    &__photo {
+        background: url('/src/img/about.jpg') 50% /cover  no-repeat ;
+        width: 40rem;
+        height: 60rem;
+    }
+    &__title {
+        @include fz36;
+    }
+    &__subtitle {
+        position: relative;
+        z-index: 2;
+        @include fz16;
+        @include before-circle;
+    }
+    &__description {
+        width: 57rem;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 2.1rem;
+        margin-top: 2rem;
+        & a {
+            text-decoration: none;
+            // color: blue;
+        }
+
+    }
+    &__skills {
+        display:flex;
+        justify-content: space-around;
+        margin-top: 2.4rem;
+
+    }
+    &__skill {
+        position: relative;
+        display: flex;
+        flex-direction: column;   
+        width: 26rem;
+        height: 11.6rem;
+        padding-left: 4rem;
+        @include fz14;
+
+
+        &-description {
+            margin-top: 0.6rem;
+            
+        }
+        &-icon {
+            position: absolute;
+            left: 0;
+            top: 20px;
+            @include before-circle;
+
+        }
+
+    }
+    .divider {
+        margin: 0;
+    }
+    
+}
+

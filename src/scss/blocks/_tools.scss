@@ -1,0 +1,38 @@
+.skills {
+    padding-top: 8rem;
+    &__wrapper {
+        margin-top: 3rem;
+        padding: 0 1rem 0 1rem;
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        grid-template-rows: repeat(2, 250px);
+        column-gap: 1.3rem;
+        row-gap: 1.3rem;
+
+    }
+    &__item {
+        padding: 1.5rem;
+        width:25rem;
+        // height: 25rem;
+        border: 1px solid;
+        &-title {
+            @include fz16;
+            text-align: center;
+        }
+        &-subtitle {
+            margin-top: 1rem;
+            text-align: center;
+            @include fz14;
+
+        }
+        &-icon {
+
+            padding-top: 1rem;
+            text-align: center;
+            img {
+                width:65;
+                height:46;
+            }
+        }
+    }
+}

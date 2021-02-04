@@ -1,0 +1,35 @@
+.promo {
+    min-height: 50vh;
+    padding-top: 20.5rem;
+    &__title {
+        width: 53.5rem;
+        margin-top: 1rem;
+        @include fz36;
+
+    }
+    &__subtitle {
+        position: relative;
+        @include before-circle;  
+        @include fz48;
+    }
+    &__btns {
+        margin-top: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 30rem;
+
+    }
+    &__link {
+        @include fz20;
+        color: $main-color;
+        transition: all 0.4s;
+
+        &:hover {
+            color: $font-color;
+            text-decoration: none;
+            color: $font-color;
+            box-shadow: 0 5px 0 $font-color;
+        }
+    }
+}

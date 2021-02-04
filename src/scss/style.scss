@@ -1,0 +1,43 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,700;1,300&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+@import 'blocks/header';
+
+:root {
+    font-size: 10px;
+}
+
+
+* {
+    font-family: 'Poppins', serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    color:#222;
+
+}
+.title {
+    font-weight: 700;
+    line-height: 6rem ;
+}
+.container {
+    margin: 0 auto;
+    width: 114rem;
+    
+}
+.divider {
+    border: 3px solid $main-color;
+    width: 6rem;
+    margin: 2.5rem auto 0 auto;
+}
+
+@import 'blocks/_promo';
+@import 'blocks/buttons';
+@import 'blocks/sidepanel';
+@import 'blocks/about';
+@import 'blocks/resume';
+@import 'blocks/hamburger';
+@import 'blocks/tools';
+@import 'blocks/projects';

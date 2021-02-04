@@ -1,0 +1,21 @@
+.header {
+    padding-top: 3rem;
+    }
+    .nav {
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        &__item a {
+            @include fz20;
+            text-decoration: none;
+            margin-left: 3rem;
+            cursor: pointer;
+            color: $main-color;
+            background:transparent;
+            transition: all 0.4s;
+        }
+        &__item a:hover {
+            color: $font-color;
+            box-shadow: 0 5px 0 $font-color;
+        }
+    }
