@@ -7,14 +7,16 @@
         grid-auto-rows: 28rem;
         gap: 5px;
     }
-    
+
     &__title {
-        margin: 0 auto;
+        text-align: center;
         position: relative;
         text-align: center;
-        width: 100px;
         @include fz16;
         @include before-circle;
+        &::before {
+            @include circle;
+        }
     }
     
     &__subtitle {   
@@ -28,7 +30,6 @@
 
         }
         &:hover {
-
             transform: scale(1.025);
         }
     }

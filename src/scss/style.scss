@@ -16,11 +16,14 @@
     padding: 0;
     scroll-behavior: smooth;
     color:#222;
+}
 
+a {
+    text-decoration: none;
 }
 .title {
     font-weight: 700;
-    line-height: 6rem ;
+    line-height: 6rem;
 }
 .container {
     margin: 0 auto;
@@ -29,7 +32,7 @@
 }
 .divider {
     border: 3px solid $main-color;
-    width: 6rem;
+    width: 10rem;
     margin: 2.5rem auto 0 auto;
 }
 
@@ -39,5 +42,8 @@
 @import 'blocks/about';
 @import 'blocks/resume';
 @import 'blocks/hamburger';
-@import 'blocks/tools';
+@import 'blocks/skills';
 @import 'blocks/projects';
+@import 'blocks/contacts';
+@import 'blocks/pageup';
+@import 'blocks/media';

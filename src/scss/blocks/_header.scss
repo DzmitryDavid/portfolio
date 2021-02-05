@@ -1,18 +1,24 @@
 .header {
-    padding-top: 3rem;
+    &__nav {
+        width: auto;
+        position: absolute;
+        left: 102rem;
+        top: 5rem;
     }
+}
     .nav {
         display: flex;
         list-style-type: none;
-        justify-content: flex-end;
+        // justify-content: flex-end;
         &__item a {
             @include fz20;
             text-decoration: none;
             margin-left: 3rem;
             cursor: pointer;
-            color: $main-color;
+            color: #fff;
             background:transparent;
             transition: all 0.4s;
+            letter-spacing: 0.2rem;
         }
         &__item a:hover {
             color: $font-color;

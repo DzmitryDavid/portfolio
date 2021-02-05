@@ -1,5 +1,17 @@
-.btn {
-    height: 4.5rem;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    padding: 1.2rem 2.5rem;
+.pageup {
+    display: none;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 5rem;
+    height: 5rem;
+
+    img {
+        transition: all 0.6s ease;
+        width: 100%;
+        &:hover {
+            transition: all 0.6s ease;
+            transform: scale(1.2);
+        }
+    }
 }

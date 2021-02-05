@@ -2,15 +2,13 @@
     padding-top: 1rem;
     
     &__title {
-        @include fz16;
+        @include fz20;
         position: relative;
         text-align: center;
         @include before-circle;
-        &::before {
-            top: -6px;
-            left: 47%;
-            transform: translate(-50%);
-        }
+        width: 11%;
+        margin: 0 auto;
+    
     }
     &__subtitle {
         text-align: center;
@@ -20,37 +18,28 @@
         padding: 3rem  6.5rem 0 6.5rem;
         display: grid;
         column-gap: 13.5rem;
+        grid-template-rows: repeat(2,20rem);
         grid-template-columns: repeat(2, 42rem);
     }
-    &__column {
+
+    &__item {
+        padding: 20px;
+        text-align: center;
+
         &-title {
             position: relative;
-            padding-left: 3.5rem;
+            @include before-circle;
             @include fz20;
-
+    
             &::before {
-                content: '';
-                position: absolute;
-                width: 15px;
-                height: 15px;
-                background: $main-color;
-                border-radius: 100%;
-                left: -5px;
-                z-index: -1;
+                @include circleMini;
+            }
+            &::after {
+                content: url('/src/icons/experience/university.svg');
+                margin-left: 1rem;
             }
         }
-    }
-    &__item {
-        &-head {
-            position: relative;
-            padding: 45px 0 0 100px;
-
-        }
-        &-icon {
-            position: absolute;
-            top: 55px;
-            left: 102px;
-        }
+    
         &-univer {
             margin-top: 1rem;;
             @include fz16;

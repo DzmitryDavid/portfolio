@@ -1,0 +1,17 @@
+.contacts {
+    &__title {
+        margin-top: 6rem;
+        position: relative;
+        @include fz20;
+        @include before-circle;
+        
+        text-align: center;
+        &::before {
+            @include circle;
+        }
+    }
+    &__subtitle {
+        @include fz36;    
+        text-align: center;
+    }
+}
