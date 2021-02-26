@@ -1,17 +1,18 @@
 .about {
-    padding-top:  10rem ;
+    padding-top:  8rem ;
+    padding-bottom: 8rem;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     &__wrapper {
         display: grid;
         grid-template-columns: 400px 670px ;
-        grid-template-rows: minmax(245px, auto) minmax(255px, auto);
-        grid-auto-rows: minmax(245px, auto);
+        // grid-template-rows: minmax(245px, auto) minmax(255px, auto);
+        // grid-auto-rows: minmax(245px, auto);
         row-gap: 4rem;
         column-gap: 7rem;
     }
     &__photo {
         grid-row: 1 / 3;
-        grid-column: 1/ 2;
- 
+
         img {
             width: 100%;
             object-fit: cover;
@@ -25,16 +26,19 @@
     }
     &__subtitle {
         @include fz36;
+        color: $subtitle-color;
     }
 
     &__text {
-        margin-top: 4rem;
+        margin-top: 3rem;
         @include fz16;
+        letter-spacing: 0.1rem;
     }
     
     &__divider {
         border: 3px solid $main-color;
         width: 10rem;
         margin-top: 2.5rem;
+        background: $main-color;
     }
 }

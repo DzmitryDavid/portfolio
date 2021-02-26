@@ -15,3 +15,68 @@
         }
     }
 }
+.btn {
+    text-align: center;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    @include fz20;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+
+
+}
+.btn:hover {
+    text-decoration: none;
+}
+
+/*btn_background*/
+.effect04 {
+    --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
+    display: var(--uismLinkDisplay);
+    color: $main-color;
+    outline: solid 2px red;
+    position: relative;
+    transition-duration: 0.4s;
+    // border: 1px solid red;
+    background: #fff;
+    overflow: hidden;
+}
+
+.effect04::before,
+.effect04 span {
+    color: $main-color;
+
+    margin: 0 auto;
+    transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
+    transition-duration: 0.4s;
+}
+
+.effect04:hover {
+    background-color: $main-color;
+}
+
+.effect04:hover span {
+    -webkit-transform: translateY(-400%) scale(-0.1, 20);
+    transform: translateY(-400%) scale(-0.1, 20);
+}
+
+.effect04::before {
+    content: attr(data-sm-link-text);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    -webkit-transform: translateY(500%) scale(-0.1, 20);
+    transform: translateY(500%) scale(-0.1, 20);
+}
+
+.effect04:hover::before {
+    letter-spacing: 0.05em;
+    -webkit-transform: translateY(0) scale(1, 1);
+    transform: translateY(0) scale(1, 1);
+}

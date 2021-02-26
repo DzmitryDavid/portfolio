@@ -29,12 +29,62 @@
             column-gap: 30px;
         }
     }
-
+    
     .hamburger {
         visibility: visible;
     }
     .header__nav {
         display: none;
+    }
+    .resume {
+        &__wrapper {
+            column-gap:20px;
+        }
+    }
+    .skills {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 250px);
+            justify-content: space-between;
+        }
+    }
+
+    .projects {
+        &__wrapper {
+            grid-template-columns: repeat(auto-fit, 270px) ;
+            justify-content: space-around;
+            grid-auto-rows: 28rem;
+            row-gap: 35px;
+            .vertical {
+                grid-row: unset;
+                grid-column: unset;
+            }
+            .horizontal {
+                grid-row: unset;
+                grid-column: unset;
+            }
+        }
+        &__item {
+            img {
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+            }
+        }
+    }
+    .contacts {
+        &__wrapper {
+            grid-template-columns: 329px 570px;
+            column-gap: 3rem;
+        }
+        &__form {
+            // width: 100%;
+            grid-template-rows: 4.5rem 19rem 4.5rem ;
+
+            column-gap: 10px;
+        }
+        &__photo {
+            // display:none;
+        }
     }
 }
 
@@ -47,13 +97,33 @@
             font-size: 30px;
             line-height: 30px;
         }
+    
+    }
+    .resume {
         &__wrapper {
-            grid-template-columns: 300px 380px;
+            padding: 30px;
+            column-gap: 20px;
+            grid-template-columns: repeat(2, 320px);
+            grid-template-rows: repeat(2, 213px);
         }
-        &__photo img {
-            text-align: center;
-            width: 100%;
-        }
+
+    }
+    .contacts {
+         
+            &__subtitle {
+                font-size: 30px;
+                line-height: 30px;
+            }
+            &__wrapper {
+                grid-template-columns: 1fr;
+               
+            }
+            &__form {
+                grid-template: 4.5rem 19rem 4.5rem / repeat(2, 21rem);
+            }
+            &__photo {
+                display: none;
+            }
     }
 }
 @media (max-width: 768px) {
@@ -72,13 +142,27 @@
             grid-template-rows: 400px auto auto; 
             grid-template-columns: 1fr;
         }
-        &__photo {
-            // grid-row: unset;
-        }
         img {
             text-align: center;
-            // width: 35rem;
-            // object-fit: contain;
+            
+        }
+    }
+    .resume {
+        padding-top: 4rem;
+        &__wrapper {
+            padding: 30px;
+            column-gap: 5px;
+            grid-template-columns: repeat(2, 237px);
+            grid-template-rows: repeat(2, 230px);
+            &__title {
+                font-size: 26px;
+            }
+        }
+        &__item {
+            &-title {
+                letter-spacing: 0.1px;
+                
+            }
         }
     }
 }
@@ -89,7 +173,7 @@
         padding: 0 10px;
     }
     .promo__btns {
-        width: 70%;
+        width: 80%;
     }
     .promo {
         padding-top: 8rem;
@@ -102,7 +186,7 @@
         }
     }
     .promo__btns {
-        margin-top: 3rem;
+        margin-top: 10rem;
         & a {
             font-size: 20px;
             line-height: 20px;
@@ -136,10 +220,37 @@
         }
         &__subtitle {
             margin-top: 20px;
-            line-height: 34px;
+            line-height: 25px;
+            font-size: 26px;
         }
     }
+
+    .resume {
+        &__title {
+            font-size: 20px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        &__wrapper {
+            grid-template-columns: 1fr;
+        }
         
+    }
+    .skills {
+        &__wrapper {
+            justify-content: center;
+        }
+    }
+    .contacts {
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
 }
     
 

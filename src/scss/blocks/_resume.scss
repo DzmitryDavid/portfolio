@@ -1,24 +1,24 @@
 .resume {
-    padding-top: 1rem;
-    
+    padding-top: 8rem;
     &__title {
         @include fz20;
         position: relative;
         text-align: center;
         @include before-circle;
-        width: 11%;
+        // width: 11%;
         margin: 0 auto;
-    
+        
     }
     &__subtitle {
         text-align: center;
+        color: $subtitle-color;
         @include fz36
     }
     &__wrapper {
         padding: 3rem  6.5rem 0 6.5rem;
         display: grid;
         column-gap: 13.5rem;
-        grid-template-rows: repeat(2,20rem);
+        grid-template-rows: repeat(2, 20rem);
         grid-template-columns: repeat(2, 42rem);
     }
 
@@ -35,8 +35,19 @@
                 @include circleMini;
             }
             &::after {
-                content: url('/src/icons/experience/university.svg');
+                content: url('../../src/icons/experience/university.svg');
                 margin-left: 1rem;
+            }
+            &-exp {
+                &::before {
+                    @include circleMini;
+                }
+                position: relative;
+                @include fz20;
+                &::after {
+                    content: url('../../src/icons/about_me/web_development.svg');
+                    margin-left: 1rem;
+                }
             }
         }
     
