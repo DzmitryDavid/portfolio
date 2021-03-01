@@ -7,12 +7,27 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeElem = document.querySelector('.menu__close');
     const overlay = document.querySelector('.menu__overlay');
     const pageUp = document.querySelector('.pageup');
+    const promoSection = document.querySelector('.promo');
     const aboutLink = document.querySelector('.promo__link');
     const worksLink = document.querySelector('.promo__link-works');
     const checkboxLabel = document.querySelector('.checkbox__label')
     const nav = document.querySelector('.header__nav');
 
 
+    const stickyBurger = function(entries) {
+        const [entry] = entries;
+
+        if (entry.isIntersecting) burger.classList.remove('sticky');
+        else burger.classList.add('sticky');
+    }
+    
+    const burgerObserver = new IntersectionObserver(stickyBurger, {
+        root: null,
+        threshold: 0
+    });
+    burgerObserver.observe(promoSection)
+    
+    
     const handleHover = (e, opacity ) => {
         if (e.target.classList.contains('nav__link')) {
             const link = e.target;

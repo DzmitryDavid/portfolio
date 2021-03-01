@@ -1,8 +1,8 @@
 .header {
     transition: all ease 0.5s;
     &__nav {
-        width: auto;
         position: absolute;
+        width: auto;
         left: 102rem;
         top: 5rem;
     }
