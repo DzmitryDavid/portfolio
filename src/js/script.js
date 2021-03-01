@@ -8,9 +8,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const overlay = document.querySelector('.menu__overlay');
     const pageUp = document.querySelector('.pageup');
     const aboutLink = document.querySelector('.promo__link');
-    const worksLink = document.querySelector('[works]');
+    const worksLink = document.querySelector('.promo__link-works');
     const checkboxLabel = document.querySelector('.checkbox__label')
+    const nav = document.querySelector('.header__nav');
+
+
+    const handleHover = (e, opacity ) => {
+        if (e.target.classList.contains('nav__link')) {
+            const link = e.target;
+            const siblings = link.closest('.header__nav').querySelectorAll('.nav__link');
+            siblings.forEach(el => {
+                if (el !== link)
+                el.style.opacity = opacity
+                
+            });
+        }
+    };
+
+    nav.addEventListener('mouseover', (e) => {
+        handleHover(e, '0.4')
+    });
+    nav.addEventListener('mouseout', (e) => {
+        handleHover(e, '1')
+    });
     
+    
+
     burger.addEventListener('click', () =>{
         menu.classList.add('active');
     });
